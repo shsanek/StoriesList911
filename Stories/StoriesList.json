@@ -1,8 +1,12 @@
-{
+﻿{
 	"stories": [
 		{
 			"title": "Член судьбы",
 			"url": "https://raw.githubusercontent.com/shsanek/StoriesList911/master/Stories/Content/test_story.json"
+		},
+		{
+			"title": "Саша под завалом",
+			"url": "https://raw.githubusercontent.com/shsanek/StoriesList911/master/Stories/Content/sasha_zaval.json"
 		}
 	]
 }
