@@ -1,6 +1,8 @@
-[
-	{
-		"title": "Член судьбы",
-		"url": "https://raw.githubusercontent.com/shsanek/StoriesList911/master/Stories/Content/test_story.json"
-	}
-]
+{
+	"stories": [
+		{
+			"title": "Член судьбы",
+			"url": "https://raw.githubusercontent.com/shsanek/StoriesList911/master/Stories/Content/test_story.json"
+		}
+	]
+}

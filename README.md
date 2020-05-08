@@ -1,18 +1,34 @@
+# 911
+Текстовая игра. Где надо пройти по графу выборов ответов и найти правильный путь.
+
 ## Stories
 В игре будет много историй каждый из которых представляет граф с переходами между вершинами по экшену.
 
 ## Список доступных историй 
 Путь: `Stories/StoriesList.json`
+
+## Story
 ``` json
-    [
-        {
-            "title": "story_name",
-            "url": "https://raw.githubusercontent.com/shsanek/StoriesList911/master/[тут локальный путь до файла с историей]"
-        }
-    ]
+    {
+        "title": "story_name",
+        "url": "raw.github.com...."
+    }
 ```
 `title` - название истории для списка <br/>
 `url` - урл по которому лежит json c историей <br/>
+
+## StoriesList
+``` json
+{
+    "stories": [
+        {
+            "title": "story_name",
+            "url": "raw.github.com...."
+        }
+    ]
+}
+```
+`stories` - массив доступных историй <br/>
 
 ## Формат посторояния графа для Story
 ### Dealog
