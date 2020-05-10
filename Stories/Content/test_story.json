@@ -1,9 +1,9 @@
 {
-  "startIdentifier": "hello",
+  "startid": "hello",
   "title": "no use",
   "items": [
     {
-      "identifier": "hello",
+      "id": "hello",
       "dialogs": [
         {
           "autor": "неизвестный",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "identifier": "request",
+      "id": "request",
       "dialogs": [
         {
           "autor": "неизвестный",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "identifier": "position",
+      "id": "position",
       "dialogs": [
         {
           "autor": "неизвестный",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "identifier": "wating",
+      "id": "wating",
       "dialogs": [
         {
           "autor": "self",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "identifier": "name",
+      "id": "name",
       "dialogs": [
         {
           "autor": "неизвестный",
@@ -114,7 +114,7 @@
       "actions": []
     },
     {
-      "identifier": "fail",
+      "id": "fail",
       "dialogs": [
         {
           "autor": "вы слышите звук включаещегося блендера. крики",
