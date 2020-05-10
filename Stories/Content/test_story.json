@@ -1,7 +1,7 @@
 {
-  "startid": "hello",
+  "startNode": "hello",
   "title": "no use",
-  "items": [
+  "nodes": [
     {
       "id": "hello",
       "dialogs": [
