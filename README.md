@@ -36,35 +36,35 @@
 
 ``` json
 {
-    "autor": "Äutor",
+    "author": "Äutor",
     "text": "Message Text"
 }
 ```
 
-`autor`[optional] - от кого сообщение простое текстовое поле <br/>
+`author`[optional] - от кого сообщение простое текстовое поле <br/>
 `text`[optional] - текст соообщения <br/>
 
 ### Action
 Описание перехода между вершинами граффа.
 ``` json
 {
-    "identifier": "node_identifier",
+    "node": "node_identifier",
     "text": "button text",
     "dialog": {
-        "autor": "Äutor",
+        "author": "Äutor",
         "text": "Message Text"
     }
 }
 ```
 `text` - текст который будет отображаться на кнопке <br/>
-`identifier` - идентификатор вершины графа на которую нужно перейти <br/>
-`dialog` - сообщение которое останеться после нажатия кнопки <br/>
+`node` - идентификатор вершины графа на которую нужно перейти <br/>
+`dialog` [optional] - сообщение которое останеться после нажатия кнопки (если в диалоге не указан автор будет использоваться action.text если не указан автор то по умолчанию self (если диалога нет то то будет использоваться self action.text))<br/>
 
 ### StoryNode
 Это вершина граффа
 ``` json
 {
-    "identifier": "node_identifier",
+    "id": "node_identifier",
     "dialogs": [
         {
             "autor": "Äutor",
@@ -73,17 +73,17 @@
     ],
     "actions": [
         {
-            "identifier": "node_identifier",
+            "node": "node_identifier",
             "text": "button text",
             "dialog": {
-                "autor": "Äutor",
+                "author": "Äutor",
                 "text": "Message Text"
             }
         }
     ],
 }
 ```
-`identifier` - идентификатор вершины графа <br/>
+`id` - идентификатор вершины графа <br/>
 `dialogs` - список диалогов которые будут выведены начиная с первого <br/>
 `actions` - список Actions будут выведены как кнопки <br/>
 
@@ -91,11 +91,11 @@
 Модель графа
 ``` json
 {
-    "startIdentifier": "node_identifier",
+    "startNode": "node_identifier",
     "title": "button text",
     "nodes": [
         {
-            "identifier": "node_identifier",
+            "id": "node_identifier",
             "dialogs": [
                 {
                     "autor": "Äutor",
@@ -104,10 +104,10 @@
             ],
             "actions": [
                 {
-                    "identifier": "node_identifier",
+                    "node": "node_identifier",
                     "text": "button text",
                     "dialog": {
-                        "autor": "Äutor",
+                        "author": "Äutor",
                         "text": "Message Text"
                     }
                 }
@@ -117,7 +117,7 @@
 }
 ```
 `title` - название события <br/>
-`startIdentifier` - идентификатор вершины графа на которую нужно перейти для начала <br/>
+`startNode` - идентификатор вершины графа на которую нужно перейти для начала <br/>
 `nodes` - список вершин <br/>
 
 
