@@ -1,10 +1,14 @@
 ﻿{
+	"startStory": "story1",
 	"stories": [
 		{
+			"id": "story1",
 			"title": "Член судьбы",
-			"url": "/Stories/Content/test_story.json"
+			"url": "/Stories/Content/test_story.json",
+			"nextStories": ["story2"]
 		},
 		{
+			"id": "story2",
 			"title": "Саша под завалом",
 			"url": "/Stories/Content/sasha_zaval.json"
 		}

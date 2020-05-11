@@ -111,7 +111,16 @@
           "text": ""
         }
       ],
-      "actions": []
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": true,
+            "text": "Ура",
+            "title": "Член спасен"
+          }
+        }
+      ]
     },
     {
       "id": "fail",
@@ -125,7 +134,16 @@
           "text": ""
         }
       ],
-      "actions": []
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": false,
+            "text": "Плохо",
+            "title": "Похоже члена больше нет"
+          }
+        }
+      ]
     }
   ]
 }
