@@ -202,7 +202,7 @@
       ],
       "actions": [
         {
-          "actionScript": "service_hold_ambulance = 1;",
+          "script": "service_hold_ambulance = 1;",
           "text": "Завершить звонок",
           "endAction":  {
             "successful": true,
