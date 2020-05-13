@@ -108,7 +108,7 @@
         },
         {
           "enabled": "mom && dick && name && step < 8 && service_in_address_ambulance == 0",
-          "node": "wating",
+          "node": "wating2",
           "text": "Вы меня слышите?"
         },
         {
@@ -184,6 +184,37 @@
         {
           "author": "self",
           "text": "да вы правы это лишнее"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "id": "wating2",
+      "push": true,
+      "dialogs": [
+        {
+          "author": "",
+          "text": "да да слышу скорая скоро там?"
+        },
+        {
+          "author": "self",
+	        "show": "service_move_in_address_ambulance > 0",
+          "text": "да да скорая в пути подождите еще немного"
+        },
+        {
+          "author": "self",
+	        "show": "service_move_in_address_ambulance == 0",
+          "text": "какая скорая?"
+        },
+        {
+          "author": "",
+	        "show": "service_move_in_address_ambulance == 0",
+          "text": "вы же вызвали скорую ?"
+        },
+        {
+          "author": "self",
+	        "show": "service_move_in_address_ambulance == 0",
+          "text": "..."
         }
       ],
       "actions": []
