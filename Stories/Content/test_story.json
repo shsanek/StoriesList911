@@ -52,6 +52,7 @@
     },
     {
       "id": "position",
+	    "activationScript": "address_position = 5;",
       "dialogs": [
         {
           "author": "неизвестный",
@@ -61,10 +62,7 @@
       "actions": [
         {
           "node": "wating",
-          "text": "вызвать спасателей",
-          "dialog": {
-            "text": "<вызов спасателей по адрессу красная сибирь 96>"
-          }
+          "text": "Хорошо я поняла. Ожидайте."
         }
       ]
     },
@@ -86,13 +84,68 @@
       ],
       "actions": [
         {
+          "enabled": "!name && step < 8",
+          "script": "name = 1;",
           "node": "name",
           "text": "Как вас зовут?"
+        },
+        {
+          "enabled": "!dick && step < 8",
+          "script": "dick = 1;",
+          "node": "dick",
+          "text": "Как ваш член?"
+        },
+        {
+          "enabled": "!mom && step < 8",
+          "script": "mom = 1;",
+          "node": "mom",
+          "text": "Как ваша мама?"
+        },
+        {
+          "enabled": "step >= 8 && service_in_address_ambulance == 0",
+          "node": "dead",
+          "text": "Вы меня слышите?"
+        },
+        {
+          "enabled": "mom && dick && name && step < 8 && service_in_address_ambulance == 0",
+          "node": "wating",
+          "text": "Вы меня слышите?"
+        },
+        {
+          "enabled": "service_in_address_ambulance > 0",
+          "node": "end",
+          "text": "Скорая на месте"
+        }
+      ]
+    },
+    {
+      "id": "dead",
+      "dialogs": [
+        {
+          "author": "self",
+          "show": "service_move_in_address_ambulance > 0",
+          "text": "походу они не успели вот блиин"
+        },
+        {
+          "author": "self",
+          "show": "service_move_in_address_ambulance == 0",
+          "text": "блять я забыла вызвать скорою"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": false,
+            "text": "Плохо",
+            "title": "Похоже члена больше нет"
+          }
         }
       ]
     },
     {
       "id": "name",
+      "push": true,
       "dialogs": [
         {
           "author": "неизвестный",
@@ -100,24 +153,61 @@
         },
         {
           "author": "self",
-          "text": "Не волнуйся Денис спасатели подьехали и ствоей маленькой писькой все будет хорошо"
+          "text": "Все будет хорошо"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "id": "dick",
+      "push": true,
+      "dialogs": [
+        {
+          "author": "",
+          "text": "вы что там обалдели ? к чему этот вопрос?"
         },
         {
-          "author": "Денис",
-          "text": "Спасибо вам"
+          "author": "self",
+          "text": "да вы правы это лишнее"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "id": "mom",
+      "push": true,
+      "dialogs": [
+        {
+          "author": "",
+          "text": "вы что там обалдели ? к чему этот вопрос?"
         },
         {
-          "author": "Конец звонка",
-          "text": ""
+          "author": "self",
+          "text": "да вы правы это лишнее"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "id": "end",
+      "dialogs": [
+        {
+          "author": "",
+          "text": "ура спасибо"
+        },
+        {
+          "author": "",
+          "text": "досвидания"
         }
       ],
       "actions": [
         {
+          "actionScript": "service_hold_ambulance = 1;",
           "text": "Завершить звонок",
           "endAction":  {
             "successful": true,
-            "text": "Ура",
-            "title": "Член спасен"
+            "text": "заебумба",
+            "title": "похоже спасут пиписку"
           }
         }
       ]
