@@ -107,7 +107,7 @@
           "text": "Вы меня слышите?"
         },
         {
-          "enabled": "mom && dick && name && step < 8 && service_in_address_ambulance == 0",
+          "enabled": "mom && dick && name && step < 8",
           "node": "wating2",
           "text": "Вы меня слышите?"
         },
@@ -203,6 +203,11 @@
         },
         {
           "author": "self",
+	        "show": "service_move_in_address_ambulance > 0",
+          "text": "хорошо"
+        },
+        {
+          "author": "self",
 	        "show": "service_move_in_address_ambulance == 0",
           "text": "какая скорая?"
         },
@@ -213,7 +218,7 @@
         },
         {
           "author": "self",
-	        "show": "service_move_in_address_ambulance == 0",
+	  "show": "service_move_in_address_ambulance == 0",
           "text": "..."
         }
       ],
