@@ -247,7 +247,7 @@
             ],
             "actions": [
                 {
-                    "node": "request_name_rage",
+                    "node": "request_name",
                     "text": "Мне нужно ваше имя чтобы полиция преступила к поискам."
                 }
             ]
