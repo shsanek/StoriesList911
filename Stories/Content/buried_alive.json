@@ -224,7 +224,7 @@
             "id": "request_time",
             "dialogs": [
                 {
-                    "id": "time"
+                    "id": "time",
                     "author": "character",
                     "text": "Я не знаю я был с друзьями в баре потом... Не помню... Проснулся тут..."
                 }
