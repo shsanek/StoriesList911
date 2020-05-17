@@ -134,7 +134,7 @@
 					}
 				},
 				{
-					"enabled": "!tranquility",
+					"enabled": "!tranquility && !time_info && !fio_info && !police_hello_dialog",
 					"script": "tranquility = 1;",
 					"node": "tranquility",
 					"text": "Оскорбления не помогут",
@@ -172,7 +172,7 @@
 					"text": "Как давно вы там?"
 				},
 				{
-					"enabled": "fio_response && time_response && fio_response",
+					"enabled": "fio_response && time_response && call_response",
 					"node": "step2",
 					"text": "Полиция начала поиски"
 				}

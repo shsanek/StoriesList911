@@ -1,6 +1,6 @@
 {
 	"startStory": "buried_alive",
-	"startScript": "$service_number_of_items_police = 2; $service_number_of_items_ambulance = 2;",
+	"startScript": "$service_number_of_items_police = 2; $service_number_of_items_ambulance = 2; $service_number_of_items_firefighters = 2;",
 	"stories": [
 		{
 			"id": "story1",
