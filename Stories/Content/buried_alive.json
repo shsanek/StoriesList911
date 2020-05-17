@@ -178,7 +178,6 @@
                 },
                 {
                     "enabled": "fio_response && time_response && fio_response",
-                    "script": "fio_time = 1;",
                     "node": "step2",
                     "text": "Полиция начала поиски"
                 }
@@ -354,7 +353,7 @@
                 {
                     "node": "police_fio",
                     "enabled": "(!fio_response) && fio_info",
-                    "sript": "fio_response = 1;",
+                    "sсript": "fio_response = 1;",
                     "text": "Имя",
                     "dialog": {
                       "author": "self",
@@ -364,7 +363,7 @@
                 {
                     "node": "police_call",
                     "enabled": "!call_response",
-                    "sript": "call_response = 1;",
+                    "sсript": "call_response = 1;",
                     "text": "Телефон",
                     "dialog": {
                       "author": "self",
@@ -374,7 +373,7 @@
                 {
                     "node": "police_time",
                     "enabled": "(!time_response) && time_info",
-                    "sript": "time_response = 1;",
+                    "sсript": "time_response = 1;",
                     "text": "Время",
                     "dialog": {
                       "author": "self",
