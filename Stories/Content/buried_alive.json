@@ -353,7 +353,7 @@
                 {
                     "node": "police_fio",
                     "enabled": "(!fio_response) && fio_info",
-                    "sсript": "fio_response = 1;",
+                    "script": "fio_response = 1;",
                     "text": "Имя",
                     "dialog": {
                       "author": "self",
@@ -363,7 +363,7 @@
                 {
                     "node": "police_call",
                     "enabled": "!call_response",
-                    "sсript": "call_response = 1;",
+                    "script": "call_response = 1;",
                     "text": "Телефон",
                     "dialog": {
                       "author": "self",
@@ -373,7 +373,7 @@
                 {
                     "node": "police_time",
                     "enabled": "(!time_response) && time_info",
-                    "sсript": "time_response = 1;",
+                    "script": "time_response = 1;",
                     "text": "Время",
                     "dialog": {
                       "author": "self",
