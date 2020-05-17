@@ -322,13 +322,13 @@
                 {
                     "id": "request",
                     "author": "police",
-                    "show": "(!fio_response + !time_response + !fio_response) > 1",
+                    "show": "((!fio_response) + (!time_response) + (!fio_response)) > 1",
                     "text": "У меня к вам несколько вопросов"
                 },
                 {
                     "id": "request",
                     "author": "police",
-                    "show": "(!fio_response + !time_response + !fio_response) <= 1",
+                    "show": "((!fio_response) + (!time_response) + (!fio_response)) <= 1",
                     "text": "Ну так и что там вы узнали?"
                 },
                 {
@@ -353,7 +353,7 @@
             "actions": [
                 {
                     "node": "police_fio",
-                    "enabled": "!fio_response && fio_info",
+                    "enabled": "(!fio_response) && fio_info",
                     "sript": "fio_response = 1;",
                     "text": "Имя",
                     "dialog": {
@@ -373,7 +373,7 @@
                 },
                 {
                     "node": "police_time",
-                    "enabled": "!time_response && time_info",
+                    "enabled": "(!time_response) && time_info",
                     "sript": "time_response = 1;",
                     "text": "Время",
                     "dialog": {
@@ -383,7 +383,7 @@
                 },
                 {
                     "node": "police_hello_end",
-                    "enabled": "!time_response == time_info && !call_response && !fio_response == fio_info",
+                    "enabled": "(!time_response) == time_info && (!call_response) && (!fio_response) == fio_info",
                     "text": "Завершить звонок",
                     "dialog": {
                       "author": "self",
