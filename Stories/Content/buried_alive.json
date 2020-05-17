@@ -1,492 +1,449 @@
 {
 
-    "title": "no use",
-    "startNode": "hello",
-    "nodes": [
-        {
-            "id": "hello",
-            "dialogs": [
-                {
-                    "id": "hello",
-                    "author": "self",
-                    "text": "Вы позвонили 911 чем я могу"
-                },
-                {
-                    "id": "request",
-                    "author": "character",
-                    "text": "Да да. Я не знаю где я. Нихера не видно. И тут тесно как в ебучем в гробу... Вот блять я в гробу!"
-                },
-                {
-                    "id": "coffin",
-                    "author": "character",
-                    "text": "Блять блять я в ГРОБУ"
-                },
-                {
-                    "id": "panting",
-                    "author": "character",
-                    "text": "<тяжело дышит>"
-                },
-                {
-                    "id": "let_me_out",
-                    "author": "character",
-                    "text": "Выпустите мне нахер отсюда"
-                }
-            ],
-            "actions": [
-                {
-                    "node": "rage",
-                    "text": "Успокойтесь",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Вы должны успокоится. Вдохните досчитайте до 10. Вам нужно экономить кислород."
-                    }
-                  },
-                  {
-                    "node": "little_time",
-                    "text": "У нас мало времени",
-                    "dialog": {
-                        "author": "self",
-                        "text": "Соберитесь. У нас мало времени."
-                    }
-                  }
-            ]
-        },
-        {
-            "id": "rage",
-            "dialogs": [
-                {
-                    "id": "rage",
-                    "author": "character",
-                    "text": "Успокойтесь?! Я В ГРОБУ. Как ты работу получила! Ду.."
-                },
-                {
-                    "id": "phone_fell",
-                    "text": "Звук удра телефона"
-                },
-                {
-                    "id": "phone_fell_text",
-                    "author": "character",
-                    "text": "блять я выронил телефон. сейчас"
-                },
-                {
-                    "id": "get_the_phone",
-                    "text": "пытаеться достать телефон"
-                },
-                {
-                    "id": "get_the_phone_text",
-                    "author": "character",
-                    "text": "черт как тесно... ну давай иди сюда..."
-                },
+	"title": "no use",
+	"startNode": "hello",
+	"nodes": [{
+			"id": "hello",
+			"dialogs": [{
+					"id": "hello",
+					"author": "self",
+					"text": "Вы позвонили 911 чем я могу"
+				},
+				{
+					"id": "request",
+					"author": "character",
+					"text": "Да да. Я не знаю где я. Нихера не видно. И тут тесно как в ебучем в гробу... Вот блять я в гробу!"
+				},
+				{
+					"id": "coffin",
+					"author": "character",
+					"text": "Блять блять я в ГРОБУ"
+				},
+				{
+					"id": "panting",
+					"author": "character",
+					"text": "<тяжело дышит>"
+				},
+				{
+					"id": "let_me_out",
+					"author": "character",
+					"text": "Выпустите мне нахер отсюда"
+				}
+			],
+			"actions": [{
+					"node": "rage",
+					"text": "Успокойтесь",
+					"dialog": {
+						"author": "self",
+						"text": "Вы должны успокоится. Вдохните досчитайте до 10. Вам нужно экономить кислород."
+					}
+				},
+				{
+					"node": "little_time",
+					"text": "У нас мало времени",
+					"dialog": {
+						"author": "self",
+						"text": "Соберитесь. У нас мало времени."
+					}
+				}
+			]
+		},
+		{
+			"id": "rage",
+			"dialogs": [{
+					"id": "rage",
+					"author": "character",
+					"text": "Успокойтесь?! Я В ГРОБУ. Как ты работу получила! Ду.."
+				},
+				{
+					"id": "phone_fell",
+					"text": "Звук удра телефона"
+				},
+				{
+					"id": "phone_fell_text",
+					"author": "character",
+					"text": "блять я выронил телефон. сейчас"
+				},
+				{
+					"id": "get_the_phone",
+					"text": "пытаеться достать телефон"
+				},
+				{
+					"id": "get_the_phone_text",
+					"author": "character",
+					"text": "черт как тесно... ну давай иди сюда..."
+				},
 
-                {
-                    "id": "get_the_phone",
-                    "text": "..."
-                },
-                {
-                    "id": "get_the_phone",
-                    "text": "шуршаниие"
-                },
-                {
-                    "id": "success",
-                    "author": "character",
-                    "text": "Ну наконец-то. Так я достал. О чем это мы? А о том что вы не компетентны!"
-                }
-            ],
-            "actions": [
-                {
-                    "node": "little_time",
-                    "text": "Мало времени",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Это нам не поможет. Мы теряем время. Соберитесь."
-                    }
-                }
-            ]
-        },
-        {
-            "id": "little_time",
-            "dialogs": [
-                {
-                    "id": "sighs",
-                    "author": "character",
-                    "text": "<ВЗДЫХАЕТ>"
-                },
-                {
-                    "id": "request",
-                    "author": "character",
-                    "text": "Так... Да все я собрался. Вытаскивайте меня быстрей."
-                },
-                {
-                    "id": "gps",
-                    "author": "GPS: триангуляция завершена. погрешность 5 км."
-                },
-                {
-                    "id": "gps_self_text",
-                    "author": "self",
-                    "text": "К сожелению мы не можем определить ваше точное место положение. Скорее всего это из-за того что вы находитесь под землей."
-                },
-                {
-                    "id": "gps_text",
-                    "author": "character",
-                    "text": "ДА ВЫ ЧТО!! Я подземлей правда?! ВЫТАСКИЙ МЕНЯ!"
-                }
-            ],
-            "actions": [
-                {
-                    "enabled": "!police_hello",
-                    "script": "police_hello = 1;",
-                    "node": "police_hello",
-                    "text": "[СВЯЗАТЬСЯ С ПОЛИЦИЕЙ]",
-                    "dialog": {
-                      "author": "СОЕДЕНЕНИЕ С ПОЛИЦИЕЙ",
-                      "text": "<гудки>"
-                    }
-                },
-                {
-                    "enabled": "!tranquility",
-                    "script": "tranquility = 1;",
-                    "node": "tranquility",
-                    "text": "Оскорбления не помогут",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Вы должны слушать меня очень внимательно и отвечать быстро и четко. Нам будет намного труднее если вы будите тратить кислород на оскорбления. Вам понятно."
-                    }
-                },
-                {
-                    "enabled": "!fio_info && !tranquility",
-                    "push": "true,
-                    "script": "fio_info = 1;",
-                    "node": "request_name_rage",
-                    "text": "Как вас зовут?"
-                },
-                {
-                    "enabled": "!time_info && !tranquility",
-                    "push": "true,
-                    "script": "time_info = 1;",
-                    "node": "request_time_rage",
-                    "text": "Как давно вы там?"
-                },
-                {
-                    "enabled": "!fio_info && tranquility",
-                    "push": "true,
-                    "script": "fio_info = 1;",
-                    "node": "request_name",
-                    "text": "Как вас зовут?"
-                },
-                {
-                    "enabled": "!time_info && tranquility",
-                    "push": "true,
-                    "script": "time_info = 1;",
-                    "node": "request_time",
-                    "text": "Как давно вы там?"
-                },
-                {
-                    "enabled": "fio_response && time_response && fio_response",
-                    "node": "step2",
-                    "text": "Полиция начала поиски"
-                }
-            ]
-        },
-        {
-            "id": "step2",
-            "dialogs": [
-                {
-                    "id": "rage",
-                    "author": "character",
-                    "text": "Наконецто"
-                }
-            ],
-            "actions": [
-                {
-                    "text": "пока все",
-                    "endAction":  {
-                        "successful": false,
-                        "text": "пока все",
-                        "title": "пока все"
-                    }
-                }
-            ]
-        },
-        {
-            "id": "request_time_rage",
-            "dialogs": [
-                {
-                    "id": "rage",
-                    "author": "character",
-                    "text": "ВРЕМЯ?? Какое время. Я вам говорил я не знаю."
-                }
-            ],
-            "actions": [
-                {
-                    "node": "request_time",
-                    "text": "Вы мне этого не говорили... Раскажите что помните."
-                }
-            ]
-        },
-        {
-            "id": "request_time",
-            "dialogs": [
-                {
-                    "id": "time",
-                    "author": "character",
-                    "text": "Я не знаю я был с друзьями в баре потом... Не помню... Проснулся тут..."
-                }
-            ],
-            "actions": [
-            ]
-        },
-        {
-            "id": "request_name_rage",
-            "dialogs": [
-                {
-                    "id": "rage",
-                    "author": "character",
-                    "text": "Вася! Паша! Какая разница..."
-                }
-            ],
-            "actions": [
-                {
-                    "node": "request_name",
-                    "text": "Мне нужно ваше имя чтобы полиция преступила к поискам."
-                }
-            ]
-        },
-        {
-            "id": "request_name",
-            "dialogs": [
-                {
-                    "id": "response",
-                    "author": "character",
-                    "text": "Данил Иванович Присол. 32 года. Проживаю Бердское Шоссе 87."
-                }
-            ],
-            "actions": [
-            ]
-        },
-        {
-            "id": "tranquility",
-            "push": true,
-            "dialogs": [
-                {
-                    "id": "ok",
-                    "author": "character",
-                    "text": "Да... Я понял. Только вытащите меня"
-                }
-            ]
-        },
-        {
-            "id": "police_hello",
-            "push": true,
-            "dialogs": [
-                {
-                    "id": "hello_first",
-                    "author": "police",
-                    "show": "!police_hello_dialog",
-                    "text": "Старший детектив Игорь. Слушаю вас."
-                },
-                {
-                    "id": "hello_self",
-                    "author": "self",
-                    "show": "!police_hello_dialog",
-                    "text": "911 нас мужчина, судя по всему находиться в гробу."
-                },
-                {
-                    "id": "fun",
-                    "author": "police",
-                    "show": "!police_hello_dialog",
-                    "text": "Ну пусть вылезет от туда."
-                },
-                {
-                    "id": "no_fun_self",
-                    "author": "self",
-                    "show": "!police_hello_dialog",
-                    "text": "Детектив это не уместно."
-                },
-                {
-                    "id": "no_fun",
-                    "author": "police",
-                    "show": "!police_hello_dialog",
-                    "text": "А вы из серьезных..."
-                },
-                {
-                    "id": "hello",
-                    "author": "self",
-                    "show": "police_hello_dialog",
-                    "text": "Слушаю."
-                },
-                {
-                    "id": "request",
-                    "author": "police",
-                    "show": "((!fio_response) + (!time_response) + (!fio_response)) > 1",
-                    "text": "У меня к вам несколько вопросов"
-                },
-                {
-                    "id": "request",
-                    "author": "police",
-                    "show": "((!fio_response) + (!time_response) + (!fio_response)) <= 1",
-                    "text": "Ну так и что там вы узнали?"
-                },
-                {
-                    "id": "call_request",
-                    "author": "police",
-                    "show": "!call_response",
-                    "text": "Как вы с ним связались?"
-                },
-                {
-                    "id": "time_request",
-                    "author": "police",
-                    "show": "!time_response",
-                    "text": "Сколько времени он уже там лежит?"
-                },
-                {
-                    "id": "fio_request",
-                    "author": "police",
-                    "show": "!fio_response",
-                    "text": "Его данные имя фамилия где проживает?"
-                }
-            ],
-            "actions": [
-                {
-                    "node": "police_fio",
-                    "enabled": "(!fio_response) && fio_info",
-                    "script": "fio_response = 1;",
-                    "text": "Имя",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Его зовут Данил Иванович Присол. 32 года. Проживает Бердское Шоссе 87."
-                    }
-                },
-                {
-                    "node": "police_call",
-                    "enabled": "!call_response",
-                    "script": "call_response = 1;",
-                    "text": "Телефон",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Он сам мне набрал. У него с собой телефон."
-                    }
-                },
-                {
-                    "node": "police_time",
-                    "enabled": "(!time_response) && time_info",
-                    "script": "time_response = 1;",
-                    "text": "Время",
-                    "dialog": {
-                      "author": "self",
-                      "text": "Он лежит там со вчера"
-                    }
-                },
-                {
-                    "node": "police_hello_end",
-                    "enabled": "(time_response) == time_info && (call_response) && (fio_response) == fio_info",
-                    "text": "Завершить звонок",
-                    "dialog": {
-                      "author": "self",
-                      "script": "police_hello_dialog = 1",
-                      "text": "На данный момент у меня больше нет информации"
-                    }
-                }
-            ]
-        },
-        {
-            "id": "police_hello_end",
-            "activationScript": "carm = carm + (1 - fio_response) + (1 - time_request);",
-            "dialogs": [
-                {
-                    "id": "fio_request",
-                    "show": "!fio_response",
-                    "author": "police",
-                    "text": "Узнайте его данные немедленно...не понимаю почему это не первое что вы спросили!!"
-                },
-                {
-                    "id": "time_request",
-                    "show": "!time_response",
-                    "author": "police",
-                    "text": "Еще мне нужна информация по тому сколько он уже там"
-                },
-                {
-                    "id": "ok",
-                    "show": "time_response && fio_request",
-                    "author": "police",
-                    "text": "У нас есть вся нужная информация чтобы начать поиск."
-                },
-                {
-                    "id": "ok_self",
-                    "author": "self",
-                    "text": "Хорошо я вас поняла."
-                },
-                {
-                    "id": "end",
-                    "author": "конец звонка"
-                }
-            ],
-            "actions": [
-            ]
-        },
-        {
-            "id": "police_fio",
-            "push": true,
-            "dialogs": [
-                {
-                    "id": "ok",
-                    "author": "police",
-                    "text": "Хорошо я записал."
-                }
-            ],
-            "actions": [
-            ]
-        },
-        {
-            "id": "police_time",
-            "push": true,
-            "dialogs": [
-                {
-                    "id": "ok",
-                    "author": "police",
-                    "text": "Так даже в лучшем случаи времени у него не много... Нам надо поторопится."
-                }
-            ],
-            "actions": [
-            ]
-        },
-        {
-            "id": "police_call",
-            "push": true,
-            "dialogs": [
-                {
-                    "id": "??",
-                    "author": "police",
-                    "text": "Так а вот это странно... Кто закапывая человека кладет ему с собой телефон."
-                },
-                {
-                    "id": "???",
-                    "author": "police",
-                    "text": "Вы уверены что это не розогрыш"
-                }
-            ],
-            "actions": [
-                {
-                    "node": "police_call_end",
-                    "text": "Вполне"
-                },
-                {
-                    "node": "police_call_end",
-                    "text": "Не уверена"
-                }
-            ]
-        },
-        {
-            "id": "police_call_end",
-            "dialogs": [
-                {
-                    "id": "ok",
-                    "author": "police",
-                    "text": "Я вас понял."
-                }
-            ],
-            "actions": [
-            ]
-        }
-    ]
+				{
+					"id": "get_the_phone",
+					"text": "..."
+				},
+				{
+					"id": "get_the_phone",
+					"text": "шуршаниие"
+				},
+				{
+					"id": "success",
+					"author": "character",
+					"text": "Ну наконец-то. Так я достал. О чем это мы? А о том что вы не компетентны!"
+				}
+			],
+			"actions": [{
+				"node": "little_time",
+				"text": "Мало времени",
+				"dialog": {
+					"author": "self",
+					"text": "Это нам не поможет. Мы теряем время. Соберитесь."
+				}
+			}]
+		},
+		{
+			"id": "little_time",
+			"dialogs": [{
+					"id": "sighs",
+					"author": "character",
+					"text": "<ВЗДЫХАЕТ>"
+				},
+				{
+					"id": "request",
+					"author": "character",
+					"text": "Так... Да все я собрался. Вытаскивайте меня быстрей."
+				},
+				{
+					"id": "gps",
+					"author": "GPS: триангуляция завершена. погрешность 5 км."
+				},
+				{
+					"id": "gps_self_text",
+					"author": "self",
+					"text": "К сожелению мы не можем определить ваше точное место положение. Скорее всего это из-за того что вы находитесь под землей."
+				},
+				{
+					"id": "gps_text",
+					"author": "character",
+					"text": "ДА ВЫ ЧТО!! Я подземлей правда?! ВЫТАСКИЙ МЕНЯ!"
+				}
+			],
+			"actions": [{
+					"enabled": "!police_hello",
+					"script": "police_hello = 1;",
+					"node": "police_hello",
+					"text": "[СВЯЗАТЬСЯ С ПОЛИЦИЕЙ]",
+					"dialog": {
+						"author": "СОЕДЕНЕНИЕ С ПОЛИЦИЕЙ",
+						"text": "<гудки>"
+					}
+				},
+				{
+					"enabled": "!tranquility",
+					"script": "tranquility = 1;",
+					"node": "tranquility",
+					"text": "Оскорбления не помогут",
+					"dialog": {
+						"author": "self",
+						"text": "Вы должны слушать меня очень внимательно и отвечать быстро и четко. Нам будет намного труднее если вы будите тратить кислород на оскорбления. Вам понятно."
+					}
+				},
+				{
+					"enabled": "!fio_info && !tranquility",
+					"push": true,
+					"script": "fio_info = 1;",
+					"node": "request_name_rage",
+					"text": "Как вас зовут?"
+				},
+				{
+					"enabled": "!time_info && !tranquility",
+					"push": true,
+					"script": "time_info = 1;",
+					"node": "request_time_rage",
+					"text": "Как давно вы там?"
+				},
+				{
+					"enabled": "!fio_info && tranquility",
+					"push": true,
+					"script": "fio_info = 1;",
+					"node": "request_name",
+					"text": "Как вас зовут?"
+				},
+				{
+					"enabled": "!time_info && tranquility",
+					"push": true,
+					"script": "time_info = 1;",
+					"node": "request_time",
+					"text": "Как давно вы там?"
+				},
+				{
+					"enabled": "fio_response && time_response && fio_response",
+					"node": "step2",
+					"text": "Полиция начала поиски"
+				}
+			]
+		},
+		{
+			"id": "step2",
+			"dialogs": [{
+				"id": "rage",
+				"author": "character",
+				"text": "Наконецто"
+			}],
+			"actions": [{
+				"text": "пока все",
+				"endAction": {
+					"successful": false,
+					"text": "пока все",
+					"title": "пока все"
+				}
+			}]
+		},
+		{
+			"id": "request_time_rage",
+			"dialogs": [{
+				"id": "rage",
+				"author": "character",
+				"text": "ВРЕМЯ?? Какое время. Я вам говорил я не знаю."
+			}],
+			"actions": [{
+				"node": "request_time",
+				"text": "Вы мне этого не говорили... Раскажите что помните."
+			}]
+		},
+		{
+			"id": "request_time",
+			"dialogs": [{
+				"id": "time",
+				"author": "character",
+				"text": "Я не знаю я был с друзьями в баре потом... Не помню... Проснулся тут..."
+			}],
+			"actions": []
+		},
+		{
+			"id": "request_name_rage",
+			"dialogs": [{
+				"id": "rage",
+				"author": "character",
+				"text": "Вася! Паша! Какая разница..."
+			}],
+			"actions": [{
+				"node": "request_name",
+				"text": "Мне нужно ваше имя чтобы полиция преступила к поискам."
+			}]
+		},
+		{
+			"id": "request_name",
+			"dialogs": [{
+				"id": "response",
+				"author": "character",
+				"text": "Данил Иванович Присол. 32 года. Проживаю Бердское Шоссе 87."
+			}],
+			"actions": []
+		},
+		{
+			"id": "tranquility",
+			"push": true,
+			"dialogs": [{
+				"id": "ok",
+				"author": "character",
+				"text": "Да... Я понял. Только вытащите меня"
+			}]
+		},
+		{
+			"id": "police_hello",
+			"push": true,
+			"dialogs": [{
+					"id": "hello_first",
+					"author": "police",
+					"show": "!police_hello_dialog",
+					"text": "Старший детектив Игорь. Слушаю вас."
+				},
+				{
+					"id": "hello_self",
+					"author": "self",
+					"show": "!police_hello_dialog",
+					"text": "911 нас мужчина, судя по всему находиться в гробу."
+				},
+				{
+					"id": "fun",
+					"author": "police",
+					"show": "!police_hello_dialog",
+					"text": "Ну пусть вылезет от туда."
+				},
+				{
+					"id": "no_fun_self",
+					"author": "self",
+					"show": "!police_hello_dialog",
+					"text": "Детектив это не уместно."
+				},
+				{
+					"id": "no_fun",
+					"author": "police",
+					"show": "!police_hello_dialog",
+					"text": "А вы из серьезных..."
+				},
+				{
+					"id": "hello",
+					"author": "self",
+					"show": "police_hello_dialog",
+					"text": "Слушаю."
+				},
+				{
+					"id": "request",
+					"author": "police",
+					"show": "((!fio_response) + (!time_response) + (!fio_response)) > 1",
+					"text": "У меня к вам несколько вопросов"
+				},
+				{
+					"id": "request",
+					"author": "police",
+					"show": "((!fio_response) + (!time_response) + (!fio_response)) <= 1",
+					"text": "Ну так и что там вы узнали?"
+				},
+				{
+					"id": "call_request",
+					"author": "police",
+					"show": "!call_response",
+					"text": "Как вы с ним связались?"
+				},
+				{
+					"id": "time_request",
+					"author": "police",
+					"show": "!time_response",
+					"text": "Сколько времени он уже там лежит?"
+				},
+				{
+					"id": "fio_request",
+					"author": "police",
+					"show": "!fio_response",
+					"text": "Его данные имя фамилия где проживает?"
+				}
+			],
+			"actions": [{
+					"node": "police_fio",
+					"enabled": "(!fio_response) && fio_info",
+					"script": "fio_response = 1;",
+					"text": "Имя",
+					"dialog": {
+						"author": "self",
+						"text": "Его зовут Данил Иванович Присол. 32 года. Проживает Бердское Шоссе 87."
+					}
+				},
+				{
+					"node": "police_call",
+					"enabled": "!call_response",
+					"script": "call_response = 1;",
+					"text": "Телефон",
+					"dialog": {
+						"author": "self",
+						"text": "Он сам мне набрал. У него с собой телефон."
+					}
+				},
+				{
+					"node": "police_time",
+					"enabled": "(!time_response) && time_info",
+					"script": "time_response = 1;",
+					"text": "Время",
+					"dialog": {
+						"author": "self",
+						"text": "Он лежит там со вчера"
+					}
+				},
+				{
+					"node": "police_hello_end",
+					"enabled": "(time_response) == time_info && (call_response) && (fio_response) == fio_info",
+					"text": "Завершить звонок",
+					"dialog": {
+						"author": "self",
+						"script": "police_hello_dialog = 1",
+						"text": "На данный момент у меня больше нет информации"
+					}
+				}
+			]
+		},
+		{
+			"id": "police_hello_end",
+			"activationScript": "carm = carm + (1 - fio_response) + (1 - time_request);",
+			"dialogs": [{
+					"id": "fio_request",
+					"show": "!fio_response",
+					"author": "police",
+					"text": "Узнайте его данные немедленно...не понимаю почему это не первое что вы спросили!!"
+				},
+				{
+					"id": "time_request",
+					"show": "!time_response",
+					"author": "police",
+					"text": "Еще мне нужна информация по тому сколько он уже там"
+				},
+				{
+					"id": "ok",
+					"show": "time_response && fio_request",
+					"author": "police",
+					"text": "У нас есть вся нужная информация чтобы начать поиск."
+				},
+				{
+					"id": "ok_self",
+					"author": "self",
+					"text": "Хорошо я вас поняла."
+				},
+				{
+					"id": "end",
+					"author": "конец звонка"
+				}
+			],
+			"actions": []
+		},
+		{
+			"id": "police_fio",
+			"push": true,
+			"dialogs": [{
+				"id": "ok",
+				"author": "police",
+				"text": "Хорошо я записал."
+			}],
+			"actions": []
+		},
+		{
+			"id": "police_time",
+			"push": true,
+			"dialogs": [{
+				"id": "ok",
+				"author": "police",
+				"text": "Так даже в лучшем случаи времени у него не много... Нам надо поторопится."
+			}],
+			"actions": []
+		},
+		{
+			"id": "police_call",
+			"push": true,
+			"dialogs": [{
+					"id": "??",
+					"author": "police",
+					"text": "Так а вот это странно... Кто закапывая человека кладет ему с собой телефон."
+				},
+				{
+					"id": "???",
+					"author": "police",
+					"text": "Вы уверены что это не розогрыш"
+				}
+			],
+			"actions": [{
+					"node": "police_call_end",
+					"text": "Вполне"
+				},
+				{
+					"node": "police_call_end",
+					"text": "Не уверена"
+				}
+			]
+		},
+		{
+			"id": "police_call_end",
+			"dialogs": [{
+				"id": "ok",
+				"author": "police",
+				"text": "Я вас понял."
+			}],
+			"actions": []
+		}
+	]
 
 }
