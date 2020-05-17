@@ -159,8 +159,8 @@
                     "text": "Как вас зовут?"
                 },
                 {
-                    "enabled": "!fio_time && !tranquility",
-                    "script": "fio_time = 1;",
+                    "enabled": "!time_info && !tranquility",
+                    "script": "time_info = 1;",
                     "node": "request_time_rage",
                     "text": "Как давно вы там?"
                 },
@@ -171,8 +171,8 @@
                     "text": "Как вас зовут?"
                 },
                 {
-                    "enabled": "!fio_time && tranquility",
-                    "script": "fio_time = 1;",
+                    "enabled": "!time_info && tranquility",
+                    "script": "time_info = 1;",
                     "node": "request_time",
                     "text": "Как давно вы там?"
                 },
@@ -383,7 +383,7 @@
                 },
                 {
                     "node": "police_hello_end",
-                    "enabled": "((!time_response + !call_response + !fio_response) - (time_info + 1 + fio_info)) == 0",
+                    "enabled": "!time_response == time_info && !call_response && !fio_response == fio_info",
                     "text": "Завершить звонок",
                     "dialog": {
                       "author": "self",
