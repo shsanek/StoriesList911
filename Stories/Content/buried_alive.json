@@ -383,7 +383,7 @@
                 },
                 {
                     "node": "police_hello_end",
-                    "enabled": "((!time_response + !call_response + !fio_response) - (time_info + call_info + fio_info)) == 0",
+                    "enabled": "((!time_response + !call_response + !fio_response) - (time_info + 1 + fio_info)) == 0",
                     "text": "Завершить звонок",
                     "dialog": {
                       "author": "self",
