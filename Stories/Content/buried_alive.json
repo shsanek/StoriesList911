@@ -34,7 +34,6 @@
             ],
             "actions": [
                 {
-                    "id": "tranquility",
                     "node": "rage",
                     "text": "Успокойтесь",
                     "dialog": {
@@ -43,7 +42,6 @@
                     }
                   },
                   {
-                    "id": "little_time",
                     "node": "little_time",
                     "text": "У нас мало времени",
                     "dialog": {
@@ -96,7 +94,6 @@
             ],
             "actions": [
                 {
-                    "id": "little_time",
                     "node": "little_time",
                     "text": "Мало времени",
                     "dialog": {
@@ -136,7 +133,6 @@
             ],
             "actions": [
                 {
-                    "id": "police_hello",
                     "enabled": "!police_hello",
                     "script": "police_hello = 1;",
                     "node": "police_hello",
@@ -147,7 +143,6 @@
                     }
                 },
                 {
-                    "id": "tranquility",
                     "enabled": "!tranquility",
                     "script": "tranquility = 1;",
                     "node": "tranquility",
@@ -158,35 +153,30 @@
                     }
                 },
                 {
-                    "id": "request_name_rage",
                     "enabled": "!fio_info && !tranquility",
                     "script": "fio_info = 1;",
                     "node": "request_name_rage",
                     "text": "Как вас зовут?"
                 },
                 {
-                    "id": "request_time_rage",
                     "enabled": "!fio_time && !tranquility",
                     "script": "fio_time = 1;",
                     "node": "request_time_rage",
                     "text": "Как давно вы там?"
                 },
                 {
-                    "id": "request_name",
                     "enabled": "!fio_info && tranquility",
                     "script": "fio_info = 1;",
                     "node": "request_name",
                     "text": "Как вас зовут?"
                 },
                 {
-                    "id": "request_time",
                     "enabled": "!fio_time && tranquility",
                     "script": "fio_time = 1;",
                     "node": "request_time",
                     "text": "Как давно вы там?"
                 },
                 {
-                    "id": "step_2",
                     "enabled": "fio_response && time_response && fio_response",
                     "script": "fio_time = 1;",
                     "node": "step2",
@@ -205,7 +195,6 @@
             ],
             "actions": [
                 {
-                    "id": "end",
                     "text": "пока все",
                     "endAction":  {
                         "successful": false,
@@ -226,7 +215,6 @@
             ],
             "actions": [
                 {
-                    "id": "request_time",
                     "node": "request_time",
                     "text": "Вы мне этого не говорили... Раскажите что помните."
                 }
@@ -236,14 +224,13 @@
             "id": "request_time",
             "dialogs": [
                 {
-                    "id": "response",
+                    "id": "time"
                     "author": "character",
                     "text": "Я не знаю я был с друзьями в баре потом... Не помню... Проснулся тут..."
                 }
             ],
             "actions": [
                 {
-                    "id": "little_time",
                     "node": "little_time",
                     "text": "понятно"
                 }
@@ -260,7 +247,6 @@
             ],
             "actions": [
                 {
-                    "id": "request_name",
                     "node": "request_name_rage",
                     "text": "Мне нужно ваше имя чтобы полиция преступила к поискам."
                 }
@@ -277,7 +263,6 @@
             ],
             "actions": [
                 {
-                    "id": "little_time",
                     "node": "little_time",
                     "text": "записала"
                 }
@@ -367,7 +352,6 @@
             ],
             "actions": [
                 {
-                    "id": "fio",
                     "node": "police_fio",
                     "enabled": "!fio_response && fio_info",
                     "sript": "fio_response = 1;",
@@ -378,7 +362,6 @@
                     }
                 },
                 {
-                    "id": "call",
                     "node": "police_call",
                     "enabled": "!call_response",
                     "sript": "call_response = 1;",
@@ -389,7 +372,6 @@
                     }
                 },
                 {
-                    "id": "time",
                     "node": "police_time",
                     "enabled": "!time_response && time_info",
                     "sript": "time_response = 1;",
@@ -400,7 +382,6 @@
                     }
                 },
                 {
-                    "id": "not_info",
                     "node": "police_hello_end",
                     "enabled": "((!time_response + !call_response + !fio_response) - (time_info + call_info + fio_info)) == 0",
                     "text": "Завершить звонок",
@@ -490,12 +471,10 @@
             ],
             "actions": [
                 {
-                    "id": "yes",
                     "node": "police_call_end",
                     "text": "Вполне"
                 },
                 {
-                    "id": "no",
                     "node": "police_call_end",
                     "text": "Не уверена"
                 }
