@@ -374,19 +374,19 @@
 				},
 				{
 					"id": "ok",
-					"show": "fio_request && time_response && police_hello_dialog == 1",
+					"show": "fio_response && time_response && police_hello_dialog == 1",
 					"author": "police",
 					"text": "Отличная работа."
 				},
 				{
 					"id": "ok",
-					"show": "fio_request && time_response && police_hello_dialog == 1",
+					"show": "fio_response && time_response && police_hello_dialog == 1",
 					"author": "self",
 					"text": "Спасибо."
 				},
 				{
 					"id": "ok",
-					"show": "fio_request && time_response",
+					"show": "fio_response && time_response",
 					"author": "police",
 					"text": "У нас есть вся нужная информация чтобы начать поиск. Звоните если появятся новые данные. До связи."
 				},
