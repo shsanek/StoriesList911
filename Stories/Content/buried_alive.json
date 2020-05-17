@@ -348,10 +348,10 @@
 				{
 					"node": "police_hello_end",
 					"enabled": "(time_response) == time_info && (call_response) && (fio_response) == fio_info",
+					"script": "police_hello_dialog = police_hello_dialog + 1",
 					"text": "Завершить звонок",
 					"dialog": {
 						"author": "self",
-						"script": "police_hello_dialog = 1",
 						"text": "На данный момент у меня больше нет информации"
 					}
 				}
@@ -359,7 +359,7 @@
 		},
 		{
 			"id": "police_hello_end",
-			"activationScript": "carm = carm + (1 - fio_response) + (1 - time_request);",
+			"activationScript": "carm = carm + (1 - fio_response) + (1 - time_response);",
 			"dialogs": [{
 					"id": "fio_request",
 					"show": "!fio_response",
@@ -374,9 +374,21 @@
 				},
 				{
 					"id": "ok",
-					"show": "time_response && fio_request",
+					"show": "fio_request && time_response && police_hello_dialog == 1",
 					"author": "police",
-					"text": "У нас есть вся нужная информация чтобы начать поиск."
+					"text": "Отличная работа."
+				},
+				{
+					"id": "ok",
+					"show": "fio_request && time_response && police_hello_dialog == 1",
+					"author": "self",
+					"text": "Спасибо."
+				},
+				{
+					"id": "ok",
+					"show": "fio_request && time_response",
+					"author": "police",
+					"text": "У нас есть вся нужная информация чтобы начать поиск. Звоните если появятся новые данные. До связи."
 				},
 				{
 					"id": "ok_self",
