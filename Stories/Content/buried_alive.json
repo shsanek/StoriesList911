@@ -125,8 +125,7 @@
 				}
 			],
 			"actions": [{
-					"enabled": "!police_hello",
-					"script": "police_hello = 1;",
+					"enabled": "!(time_response == time_info) || (!call_response) || !(fio_response == fio_info)",
 					"node": "police_hello",
 					"text": "[СВЯЗАТЬСЯ С ПОЛИЦИЕЙ]",
 					"dialog": {
@@ -288,13 +287,13 @@
 				{
 					"id": "request",
 					"author": "police",
-					"show": "((!fio_response) + (!time_response) + (!fio_response)) > 1",
+					"show": "!police_hello_dialog",
 					"text": "У меня к вам несколько вопросов"
 				},
 				{
 					"id": "request",
 					"author": "police",
-					"show": "((!fio_response) + (!time_response) + (!fio_response)) <= 1",
+					"show": "police_hello_dialog",
 					"text": "Ну так и что там вы узнали?"
 				},
 				{
