@@ -79,6 +79,7 @@
                     "author": "character",
                     "text": "черт как тесно... ну давай иди сюда..."
                 },
+
                 {
                     "id": "get_the_phone",
                     "text": "..."
@@ -511,29 +512,7 @@
             ],
             "actions": [
             ]
-        },
-        {
-            "id": "template",
-            "dialogs": [
-                {
-                    "id": "template",
-                    "author": "template",
-                    "text": ""
-                }
-            ],
-            "actions": [
-                {
-                    "id": "template",
-                    "node": "template",
-                    "text": "template",
-                    "dialog": {
-                      "author": "self",
-                      "text": "template"
-                    }
-                }
-            ]
         }
-        
     ]
 
 }

@@ -1,4 +1,4 @@
-﻿{
+{
 	"startStory": "buried_alive",
 	"startScript": "$service_number_of_items_police = 2; $service_number_of_items_ambulance = 2;",
 	"stories": [
@@ -6,12 +6,13 @@
 			"id": "story1",
 			"title": "Член судьбы",
 			"url": "/Stories/Content/test_story.json",
-			"nextStories": ["buried_alive"]
+			"nextStories": ["story2"]
 		},
 		{
 			"id": "buried_alive",
 			"title": "Погребеный заживо",
-			"url": "/Stories/Content/buried_alive.json"
+            "url": "/Stories/Content/buried_alive.json",
+            "nextStories": ["story1"]
 		},
 		{
 			"id": "story2",
