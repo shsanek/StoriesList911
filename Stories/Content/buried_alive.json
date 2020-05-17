@@ -154,24 +154,28 @@
                 },
                 {
                     "enabled": "!fio_info && !tranquility",
+                    "push": "true,
                     "script": "fio_info = 1;",
                     "node": "request_name_rage",
                     "text": "Как вас зовут?"
                 },
                 {
                     "enabled": "!time_info && !tranquility",
+                    "push": "true,
                     "script": "time_info = 1;",
                     "node": "request_time_rage",
                     "text": "Как давно вы там?"
                 },
                 {
                     "enabled": "!fio_info && tranquility",
+                    "push": "true,
                     "script": "fio_info = 1;",
                     "node": "request_name",
                     "text": "Как вас зовут?"
                 },
                 {
                     "enabled": "!time_info && tranquility",
+                    "push": "true,
                     "script": "time_info = 1;",
                     "node": "request_time",
                     "text": "Как давно вы там?"
@@ -229,10 +233,6 @@
                 }
             ],
             "actions": [
-                {
-                    "node": "little_time",
-                    "text": "понятно"
-                }
             ]
         },
         {
@@ -261,10 +261,6 @@
                 }
             ],
             "actions": [
-                {
-                    "node": "little_time",
-                    "text": "записала"
-                }
             ]
         },
         {
