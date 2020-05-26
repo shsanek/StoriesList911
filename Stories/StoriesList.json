@@ -1,5 +1,5 @@
-{
-	"startStory": "buried_alive",
+﻿{
+	"startStory": "story3",
 	"startScript": "$service_number_of_items_police = 2; $service_number_of_items_ambulance = 2; $service_number_of_items_firefighters = 2;",
 	"stories": [
 		{
@@ -18,6 +18,11 @@
 			"id": "story2",
 			"title": "Саша под завалом",
 			"url": "/Stories/Content/sasha_zaval.json"
+		},
+		{
+			"id": "story3",
+			"title": "Раскол",
+			"url": "/Stories/Content/raskol.json"
 		}
 	]
 }
