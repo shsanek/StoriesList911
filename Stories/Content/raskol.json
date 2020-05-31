@@ -91,22 +91,26 @@
         {
           "enabled": "in_podval == 1",
           "node": "continue_podval",
-          "text": "Хорошо"
+          "text": "Продолжим",
+          "dialog": {
+            "author": "character",
+            "text": "Давайте быстрее, Родион меня нашёл, он пытается пробить дверь топором"
+          }          
         },
         {
           "enabled": "in_podval == 0",
           "node": "continue_garden",
-          "text": "Хорошо"
+          "text": "Продолжим",
+          "dialog": {
+            "author": "self",
+            "text": "За вами кто-то гонится? Вы знаете его?"
+          }
         }
       ]
     },
     {
       "id": "continue_podval",
       "dialogs": [
-        {
-          "author": "character",
-          "text": "Давайте быстрее, Родион меня нашёл, он пытается пробить дверь топором"
-        },
         {
           "author": "self",
           "text": "Спокойней, оглядитесь вокруг. Что вы видите?"
@@ -200,7 +204,7 @@
       ],
       "actions": [ 
        {
-          "enabled": "$service_number_of_items_police > 0 || service_move_in_address_police > 0 || service_in_address_police > 0",
+          "enabled": "service_move_in_address_police > 0 || service_in_address_police > 0",
           "node": "police_talk",
           "text": "Мне удалось установить личность подозреваемого",
           "dialog": {
@@ -631,10 +635,6 @@
     {
       "id": "continue_garden",
       "dialogs": [
-        {
-          "author": "self",
-          "text": "За вами кто-то гонится? Вы знаете его?"
-        },
         {
           "author": "character",
           "text": "Да, это студент Родион, он частенько ко мне заходил и закладывал свои вещи, ему постоянно нужны были деньги"
