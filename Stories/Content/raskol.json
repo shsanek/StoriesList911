@@ -1,9 +1,10 @@
-{
+﻿{
   "startNode": "hello",
   "title": "no use",
   "nodes": [
     {
       "id": "hello",
+      "actionscript": "rage = 0.6;",
       "dialogs": [
         {
           "author": "character",
@@ -29,10 +30,12 @@
       "actions": [
         {
           "node": "podval",
+          "script": "in_podval = 1;",
           "text": "Вы около набережной Канала Грибоедова?"
         },
         {
           "node": "garden",
+          "script": "in_podval = 0;",
           "text": "Вы в самом Никольском саду?"
         }
       ]
@@ -79,14 +82,20 @@
         },
         {
           "id": "first_rescuer",
-          "author": "police",
-          "show": "!self && service_move_in_address_police > 0",
-          "text": "/*спасатели*/ Принято. Выезжаем"
+          "author": "firefighters",
+          "show": "!self && service_move_in_address_firefighters > 0",
+          "text": "Принято. Выезжаем"
         }
       ],
       "actions": [
         {
+          "enabled": "in_podval == 1",
           "node": "continue_podval",
+          "text": "Хорошо"
+        },
+        {
+          "enabled": "in_podval == 0",
+          "node": "continue_garden",
           "text": "Хорошо"
         }
       ]
@@ -394,6 +403,468 @@
           "endAction":  {
             "successful": false,
             "text": "Алло..."
+          }
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "Кажется, у меня началась клаустрофобия"
+        },
+        {
+          "author": "self",
+          "text": "Как вы это поняли?"
+        },
+        {
+          "author": "character",
+          "text": "Я начала задыхаться"
+        },
+        {
+          "author": "self",
+          "text": "Поняла, Алена Ивановна, Вам необходимо успокоиться и нормализовать дыхание"
+        },
+        {
+          "author": "self",
+          "text": "Сделайте глубокий вдох и неспеша выдохните. Не забывайте, что по возможности нужно сохранять тишину"
+        },
+        {
+          "author": "",
+          "text": "/*на фоне слышны глубокие вздохи*/"
+        },    
+        {
+          "author": "self",
+          "text": "Алена Ивановна, Вы меня слышите"
+        },
+        {
+          "author": "character",
+          "text": "/*говорит очень тяжело дыша*/ Да, я вас слышу.."
+        },
+        {
+          "author": "self",
+          "text": "Отлично, ни в коем случае не ложитесь, прижмитесь к стенке и пытайтеть сохранить равновесие"
+        },
+        {
+          "author": "self",
+          "text": "Также опустите голову вниз, чтоб не захлебнутся мокротой"
+        },
+        {
+          "author": "self",
+          "text": "Алло?!"
+        },
+        {
+          "author": "self",
+          "text": "Алло?? Вы меня слышите "
+        },
+        {
+          "author": "character",
+          "text": "Да, я сделала всё, что вы сказали"
+        },
+        {
+          "author": "self",
+          "text": "Хорошо, если у вас на шее есть украшения, например бусы, то их необходимо снять. Они могут препятствовать вашему дыханию"
+        },
+        {
+          "author": "character",
+          "text": "Я сняла и бусы, и цепочку"
+        },
+        {
+          "author": "self",
+          "text": "Вы знали, что у вас таких последствиях клаустрофобии??"
+        },
+        {
+          "author": "character",
+          "text": "Мне 65 лет, конечно я знала"
+        },
+        {
+          "author": "self",
+          "text": "Тогда наверняка у вас должен быть ингалятор, он у вас с собой?"
+        },
+        {
+          "author": "character",
+          "text": "Нет, он остался в квартире"
+        },
+        {
+          "author": "character",
+          "text": "Что-то мне совсем не злоровится, очень трудно дышать, мне нужно на воздух"
+        }
+      ],
+        "actions": [
+        {
+          "enabled": "$service_number_of_items_ambulance > 0",
+          "node": "call_to_ambulance",
+          "text": "Позвонить в скорую",
+          "dialog": {
+            "author": "self",
+            "text": "Алло, скорая, мне нужна помощь в дистанционном лечении удушья"
+          }
+        },
+        {
+          "node": "claustr_death",
+          "text": "Главное, сохраняйте равновесие",
+          "dialog": {
+            "author": "self",
+            "text": "Главное, что вам нужно сейчас делать - это продолжать сохранять вертикальное положение, ни в коем случае не ложитесь на землю"
+          }
+        }
+      ]
+    },
+    {
+      "id": "claustr_death",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "/*Говорит едва слышно*/ Мне нечем дышать, я задыхаюсь.."
+        },
+        {
+          "author": "self",
+          "text": "Держитесь, скорая уже на подъезде, они вам помогут"
+        },
+        {
+          "author": "",
+          "text": "/*в ответ тишина*/"
+        }
+      ],
+        "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": false,
+            "text": "Жертва мертва"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call_to_ambulance",
+      "dialogs": [
+        {
+          "author": "ambulance",
+          "text": "Какие симптомы у пациента?"
+        },
+        {
+          "author": "self",
+          "text": "Пациент находится в закрытом подвале, у него проявилась клаустрофобия через удушье"
+        },
+        {
+          "author": "ambulance",
+          "text": "Что уже было предпринято?"
+        },
+        {
+          "author": "self",
+          "text": "В данный момент пациент прижался к стене с опущенной головой. Все украшения с шеи были сняты."
+        },
+        {
+          "author": "ambulance",
+          "text": "Ингалятор? у неё есть ингалятор?"
+        },
+        {
+          "author": "self",
+          "text": "Да, но только он остался в квартире. Добраться до него возможности нет"
+        },
+        {
+          "author": "ambulance",
+          "text": "Дистанционно мы больше ничего не можем сделать. Вы вызвали скорую?"
+        },
+        {
+          "show": "service_in_address_ambulance > 0 && service_in_address_police > 0",
+          "author": "self",
+          "text": "Да, они уже должны были прибыть на место, будем надеяться, что ещё не поздно"
+        },
+        {
+          "show": "service_in_address_ambulance > 0 && service_in_address_police == 0",
+          "author": "self",
+          "text": "Да, они уже должны были прибыть на место, но проблема в том, что в подвале маньяк"
+        },
+        {
+          "show": "service_in_address_ambulance == 0",
+          "author": "self",
+          "text": "Чёрт, я забыла вызвать скорую"
+        },
+        {
+          "show": "service_in_address_ambulance == 0",
+          "author": "ambulance",
+          "text": "К сожалению, мы уже не успеем..."
+        }
+      ],
+        "actions": [
+        {
+          "enabled": "service_in_address_ambulance == 0 || service_in_address_police == 0",
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": false,
+            "text": "Жертва мертва"
+          }
+        },
+        {
+          "enabled": "service_in_address_ambulance > 0 && service_in_address_police > 0",
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": true,
+            "text": "Вы спасли старуху и задержали маньяка"
+          }
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "activationScript": "address_position = 3;",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "/*запыхавшимся голосом*/ Да, я убежала в Никольский сад"
+        },
+        {
+          "author": "self",
+          "text": "Сад очень большой, уточните конкретнее где вы"
+        },
+        {
+          "author": "character",
+          "text": "Бегу в сторону моста Кашина"
+        }
+      ],
+      "actions": [
+        {
+          "node": "waiting",
+          "text": "Адрес приняла, ожидайте подмогу"
+        }
+      ]
+    },
+    {
+      "id": "continue_garden",
+      "dialogs": [
+        {
+          "author": "self",
+          "text": "За вами кто-то гонится? Вы знаете его?"
+        },
+        {
+          "author": "character",
+          "text": "Да, это студент Родион, он частенько ко мне заходил и закладывал свои вещи, ему постоянно нужны были деньги"
+        }   
+      ],
+      "actions": [
+        {
+          "enabled": "service_move_in_address_police > 0",
+          "node": "police_talk",
+          "text": "Мне удалось установить личность подозреваемого",
+          "dialog": {
+            "author": "self",
+            "text": "/*полицие*/ Офицер, мне удалось установить личность подозреваемого - некий Родион, студент 23 лет"
+          }
+        },
+        {
+          "node": "art_school",
+          "text": "Бегите в художественную школу",
+          "dialog": {
+            "author": "self",
+            "text": "Поняла. На другом берегу моста Кашина находится художественная школа, бегите туда"
+          }
+        }
+      ]
+    },
+    {
+      "id": "art_school",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "Бегу туда"
+        },
+        {
+          "author": "self",
+          "text": "Я сейчас свяжусь с управляющей, чтобы вас туда впустили"
+        }   
+      ],
+      "actions": [
+        {
+          "enabled": "service_in_address_police == 0",
+          "node": "art_manager",
+          "text": "Позвонить управляющей художественной школы"
+        },
+        {
+          "enabled": "service_in_address_police > 0",
+          "node": "go_to_art",
+          "text": "Полиция находится у художественной школы",
+          "dialog": {
+            "author": "self",
+            "text": "Полиция прибыла на место художественной школы и уже бегут к вам на встречу"
+          }
+        }
+      ]
+    },
+    {
+      "id": "go_to_art",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "Я их вижу, бегу к ним навстречу"
+        },
+        {
+          "author": "police",
+          "text": "/*to character*/ Не переживайте, успокойтесь, все кончено. Вам больше ничего не угрожает"
+        }   
+      ],
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": true,
+            "text": "Вы спасли старуху и задержали маньяка"
+          }
+        }
+      ]
+    },
+    {
+      "id": "art_manager",
+      "dialogs": [
+        {
+          "author": "self",
+          "text": "Да, здравствуйте, вам звонит оператор 911"
+        },
+        {
+          "author": "manager",
+          "text": "Добрый день! Чем я могу вам помочь"
+        },
+        {
+          "author": "self",
+          "text": "В здании художесственной школы присутствует охрана?"
+        },
+        {
+          "author": "manager",
+          "text": "Да, конечно. Кто-то пытается влезть в здание?"
+        },
+        {
+          "author": "self",
+          "text": "Нет, не беспокойтесь, никто не пытается проникнуть в вашу школу"
+        },
+        {
+          "author": "self",
+          "text": "Дело в том, что сейчас нам поступил звонок от женщины, которая убегает от маньяка. Она находится около моста Кашина. Я ей сказала бежать в вашу школу. Вы можете связаться с охраной, чтобы они её впустили?"
+        },
+        {
+          "show": "rage >= 0.5",
+          "author": "manager",
+          "text": "При чем здесь моя художественная школа? А как же полиция? Разве не они должны этим заниматься?"
+        },
+        {
+          "show": "rage < 0.5",
+          "author": "manager",
+          "text": "Да, сейчас я им позвоню"
+        }
+      ],
+      "actions": [
+        {
+          "enabled": "service_in_address_police == 0 && service_move_in_address_police == 0",
+          "node": "forgot_police",
+          "text": "Чёрт, я забыла вызвать полицию"
+        },
+        {
+          "enabled": "(service_in_address_police > 0 || service_move_in_address_police > 0) && (rage >= 0.5 && service_in_address_police == 0)",
+          "node": "negative_answer",
+          "text": "Полиция уже в пути"
+        },
+        {
+          "enabled": "(service_in_address_police > 0 || service_move_in_address_police > 0) && rage < 0.5",
+          "node": "positive_answer",
+          "text": "Спасибо вам большое"
+        }
+      ]
+    },
+    {
+      "id": "forgot_police",
+      "dialogs": [
+        {
+          "author": "character",
+          "text": "Родион меня догнал, кажется я не смогу добежать..."
+        },
+        {
+          "author": "",
+          "text": "/*слышны крики старухи*/"
+        }   
+      ],
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": false,
+            "text": "Вы не смогли предотвратить маньяка"
+          }
+        }
+      ]
+    },
+    {
+      "id": "negative_answer",
+      "dialogs": [
+        {
+          "author": "self",
+          "text": "Но они ещё не прибыли на место. Я вас прошу помочь спасти бедную старушку"
+        },
+        {
+          "author": "self",
+          "text": "Она столько уже испытала. Маньяк - ее знакомый, который пришел с закладом, и в то время как она пыталась развязать мешочек, он пытался убить ее топором. Она уже многое натерпелась"
+        },
+        {
+          "author": "",
+          "text": "/*На фоне слышны недовольные вздохи менеджера*/"
+        },
+        {
+          "author": "self",
+          "text": "Ну, пожалуйста!! Я вас очень прошу"
+        },
+        {
+          "author": "manager",
+          "text": "Ладно, сейчас позвоню"
+        },
+        {
+          "author": "",
+          "text": "/*менеджер разговаривает с охранником художественной школы*/"
+        },
+        {
+          "author": "manager",
+          "text": "Пускай бежит к центральному входу, двери будут открыты"
+        },
+        {
+          "author": "self",
+          "text": "Спасибо вам огромное!"
+        },
+        {
+          "author": "self",
+          "text": "/*старухе*/ Бегите к центральному входу, охранник вам поможет"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  {
+            "successful": true,
+            "text": "Вы спасли старуху"
+          }
+        }
+      ]
+    },
+    {
+      "id": "positive_answer",
+      "dialogs": [
+        {
+          "author": "manager",
+          "text": "Пускай бежит к центральному входу, двери будут открыты"
+        },
+        {
+          "author": "self",
+          "text": "Спасибо вам огромное!"
+        },
+        {
+          "author": "self",
+          "text": "/*старухе*/ Бегите к центральному входу, охранник вам поможет"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Завершить звонок",
+          "endAction":  { 
+            "successful": true,
+            "text": "Вы спасли старуху"
           }
         }
       ]
