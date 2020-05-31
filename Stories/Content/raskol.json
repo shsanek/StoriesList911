@@ -4,7 +4,7 @@
   "nodes": [
     {
       "id": "hello",
-      "actionscript": "rage = 1;",
+      "actionscript": "rage.setRandom();",
       "dialogs": [
         {
           "author": "character",
