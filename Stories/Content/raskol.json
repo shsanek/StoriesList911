@@ -4,7 +4,7 @@
   "nodes": [
     {
       "id": "hello",
-      "actionscript": "rage = 0.6;",
+      "actionscript": "rage = 1;",
       "dialogs": [
         {
           "author": "character",
