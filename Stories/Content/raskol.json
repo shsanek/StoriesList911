@@ -71,19 +71,19 @@
         {
           "id": "first_ambulance",
           "author": "ambulance",
-          "show": "!self && service_move_in_address_ambulance > 0",
+          "show": "service_move_in_address_ambulance > 0",
           "text": "Принято.Выезжаем"
         },
         {
           "id": "first_police",
           "author": "police",
-          "show": "!self && service_move_in_address_police > 0",
+          "show": "service_move_in_address_police > 0",
           "text": "Принято.Выезжаем"
         },
         {
           "id": "first_rescuer",
           "author": "firefighters",
-          "show": "!self && service_move_in_address_firefighters > 0",
+          "show": "service_move_in_address_firefighters > 0",
           "text": "Принято. Выезжаем"
         }
       ],
