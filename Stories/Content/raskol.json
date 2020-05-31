@@ -257,12 +257,8 @@
       "actions": [
         {
           "text": "Завершить звонок",
-          "dialog": {
-            "author": "character",
-            "text": "/*полицие*/ Офицер, мне удалось установить личность подозреваемого - некий Родион, студент 23 лет"
-          },
           "endAction":  {
-            "successful": false,
+            "successful": true,
             "text": ""
           }
         }
